@@ -12,9 +12,6 @@
       "matches": [
         "*://*/*"
       ],
-      "include_globs": [
-        "*://*.google.*/*"
-      ],
       "js": [
         "js/jquery.min.js",
         "./inject.js"
