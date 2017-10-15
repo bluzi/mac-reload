@@ -13,8 +13,7 @@
         "*://*/*"
       ],
       "js": [
-        "js/overscroll.min.js",        
-        "./inject.js"
+        "./mac-reload.dist.js"
       ]
     }
   ]
