@@ -1,17 +1,22 @@
 /*
 *	Entry
 */
-chrome.extension.sendMessage({}, function (response) {
-    var readyStateCheckInterval = setInterval(function () {
-        if (document.readyState === 'complete') {
-            clearInterval(readyStateCheckInterval);
 
-            console.log('Mac Reload is running');
+function injectOnIntervalTimer() {
+  if (document.readyState === 'complete') {
+      clearInterval(readyStateCheckInterval);
 
-            AddDom();
-        }
-    }, 10);
-});
+      console.log('Mac Reload is running');
+
+      AddDom();
+  }
+}
+
+function injectOnMessageResponse(response) {
+  var readyStateCheckInterval = setInterval(injectOnIntervalTimer, 10);
+}
+
+chrome.extension.sendMessage({}, injectOnMessageResponse);
 
 function AddDom() {
     const elem = document.createElement('div');
