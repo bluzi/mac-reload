@@ -1,17 +1,6 @@
 /*
 *	Entry
 */
-chrome.extension.sendMessage({}, function (response) {
-    var readyStateCheckInterval = setInterval(function () {
-        if (document.readyState === 'complete') {
-            clearInterval(readyStateCheckInterval);
-
-            console.log('Mac Reload is running');
-
-            AddDom();
-        }
-    }, 10);
-});
 
 function AddDom() {
     const elem = document.createElement('div');
@@ -21,6 +10,20 @@ function AddDom() {
 
     document.body.insertBefore(elem, document.body.firstChild);
 
-    let isReloading = false;
-    overscroll(e => e.direction === 'up' && !isReloading && (console.log('reloading...'), isReloading = true) && document.location.reload());
+    overscroll(e =>
+        e.direction === 'up' &&
+        document.location.reload()
+    );
 }
+
+chrome.extension.sendMessage({}, () => {
+    const readyStateCheckInterval = setInterval(() => {
+        if (document.readyState !== 'complete') return;
+
+        clearInterval(readyStateCheckInterval);
+
+        console.log('Mac Reload is running');
+
+        AddDom();
+    }, 10);
+});
