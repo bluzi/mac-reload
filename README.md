@@ -10,5 +10,20 @@
 ## Installation
 You may install *Mac Reload* from the Chrome Web Store, using the following link: https://chrome.google.com/webstore/detail/mac-reload/jmjbompggjpodbaehpndnodaglngeoba
 
+## Development
+To start adding new features, start by running the grunt watch:
+
+```
+$ npm run dev
+```
+
+## Production
+When you think the plugin is ready to go production just run:
+
+
+```
+$ npm run prod
+```
+
 ## Contribution
 We accept any kind of contribution :) 

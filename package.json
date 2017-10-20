@@ -1,0 +1,31 @@
+{
+  "name": "mac-reload",
+  "version": "1.0.0",
+  "description": "Mac Reload is an extension for Google Chrome running on macOS which adds a pull to reload functionality.",
+  "main": "inject.js",
+  "scripts": {
+    "dev": "grunt build-dev",
+    "prod": "grunt build-prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluzi/mac-reload.git"
+  },
+  "author": "Eliran Pe'er",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bluzi/mac-reload/issues"
+  },
+  "homepage": "https://github.com/bluzi/mac-reload#readme",
+  "dependencies": {
+    "overscrolljs": "^1.0.4"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.6.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.0.0",
+    "grunt-remove-logging": "^0.2.0"
+  }
+}

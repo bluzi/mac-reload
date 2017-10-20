@@ -1,1 +1,3 @@
 app.zip
+dist/*.js
+node_modules
