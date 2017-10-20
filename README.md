@@ -1,5 +1,5 @@
 # Mac Reload
-*Mac Reload* is an extension for Google Chrome running on macOS which adds a pull to reload functionality. It is free, lightweight and fully open-source.
+*Mac Reload* is a Google Chrome extension for computers running on the macOS. This extension offers a pull to reload functionality. It is free, lightweight, and fully open-source.
 
 ## Preview
 ![](preview.gif)
@@ -9,6 +9,21 @@
 
 ## Installation
 You may install *Mac Reload* from the Chrome Web Store, using the following link: https://chrome.google.com/webstore/detail/mac-reload/jmjbompggjpodbaehpndnodaglngeoba
+
+## Development
+To start adding new features, start by running the grunt watch:
+
+```
+$ npm run dev
+```
+
+## Production
+When you think the plugin is ready to go production just run:
+
+
+```
+$ npm run prod
+```
 
 ## Contribution
 We accept any kind of contribution :) 
